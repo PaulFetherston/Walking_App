@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/times"
+        android:paddingTop="5sp">
+        <TextView
+            android:id="@+id/totalTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:paddingLeft="5sp"
+            android:paddingStart="5sp"
+            android:paddingRight="2.5sp"
+            android:paddingEnd="2.5sp"
+            android:text="@string/tv_totalTime"
+            />
+
+        <TextView
+            android:id="@+id/totalDistance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:paddingLeft="5sp"
+            android:paddingStart="5sp"
+            android:paddingRight="2.5sp"
+            android:paddingEnd="2.5sp"
+            android:text="Total Distance = " />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/speeds"
+        android:layout_below="@+id/times"
+        android:paddingTop="5sp">
+        <TextView
+            android:id="@+id/speed_max"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:paddingLeft="5sp"
+            android:paddingStart="5sp"
+            android:paddingRight="2.5sp"
+            android:paddingEnd="2.5sp"
+            android:text="Max Speed:" />
+
+        <TextView
+            android:id="@+id/speed_min"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:paddingLeft="2.5sp"
+            android:paddingStart="2.5sp"
+            android:paddingRight="2.5sp"
+            android:paddingEnd="2.5sp"
+            android:text="Min Speed: " />
+
+        <TextView
+            android:id="@+id/speed_average"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:paddingLeft="2.5sp"
+            android:paddingStart="2.5sp"
+            android:paddingRight="2.5sp"
+            android:paddingEnd="2.5sp"
+            android:text="Avg. Speed: " />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/altitudes"
+        android:layout_below="@+id/speeds"
+        android:paddingTop="5sp">
+        <TextView
+            android:id="@+id/alt_max"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:paddingLeft="5sp"
+            android:paddingStart="5sp"
+            android:paddingRight="2.5sp"
+            android:paddingEnd="2.5sp"
+            android:text="Max Altitude:" />
+
+        <TextView
+            android:id="@+id/alt_min"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:paddingLeft="5sp"
+            android:paddingStart="5sp"
+            android:paddingRight="2.5sp"
+            android:paddingEnd="2.5sp"
+            android:text="Min Altitude: " />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gains"
+        android:layout_below="@+id/altitudes"
+        android:paddingTop="5sp">
+        <TextView
+            android:id="@+id/alt_gain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:paddingLeft="5sp"
+            android:paddingStart="5sp"
+            android:paddingRight="2.5sp"
+            android:paddingEnd="2.5sp"
+            android:text="Altitude Gained:" />
+
+        <TextView
+            android:id="@+id/alt_loss"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:paddingLeft="5sp"
+            android:paddingStart="5sp"
+            android:paddingRight="2.5sp"
+            android:paddingEnd="2.5sp"
+            android:text="Altitude Lost: " />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btns"
+        android:layout_below="@+id/gains"
+        android:paddingTop="5sp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/alt_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_alt" />
+        <Button
+            android:id="@+id/distance_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_dist" />
+
+
+    </LinearLayout>
+
+    <com.example.paul.assignment5.CustomView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:layout_below="@+id/btns"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="45dp"
+        android:padding="16dp"
+        />
+
+</RelativeLayout>
